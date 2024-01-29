@@ -1,0 +1,16 @@
+[colors.primary]
+background = "#011627"
+
+[font]
+size=12.0
+
+[font.normal]
+family="Hack Nerd Font Mono"
+style="Regular"
+
+[window]
+opacity=0.95
+
+[window.padding]
+x=12
+y=12
