@@ -2,15 +2,12 @@
 background = "#011627"
 
 [font]
-size=12.0
+size=14.0
 
 [font.normal]
-family="Hack Nerd Font Mono"
+family="Inconsolata Nerd Font"
 style="Regular"
-
-[window]
-opacity=0.95
 
 [window.padding]
 x=12
-y=12
+y=8
