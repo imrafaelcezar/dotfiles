@@ -6,7 +6,7 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 exec --no-startup-id polybar
-exec --no-startup-id feh --bg-fill ~/Pictures/kitzbuhel-bwcxNg8dkiI-unsplash.jpg
+exec_always --no-startup-id feh --bg-fill ~/.config/wallpaper.jpg
 exec_always --no-startup-id picom
 
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -20,10 +20,11 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 bindsym $mod+t exec alacritty
+bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+p exec flameshot gui
+bindsym $mod+Shift+s exec betterlockscreen -l dimblur
 
 bindsym $mod+q kill
-
-bindsym $mod+d exec --no-startup-id dmenu_run
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -86,8 +87,6 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-
-bindsym $mod+p exec "flameshot gui"
 
 mode "resize" {
         bindsym h resize shrink width 10 px or 10 ppt
