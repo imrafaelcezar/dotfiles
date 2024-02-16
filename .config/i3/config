@@ -19,10 +19,11 @@ floating_modifier $mod
 
 tiling_drag modifier titlebar
 
-bindsym $mod+t exec alacritty
+bindsym $mod+c exec --no-startup-id chromium
 bindsym $mod+d exec --no-startup-id dmenu_run
-bindsym $mod+p exec flameshot gui
-bindsym $mod+Shift+s exec betterlockscreen -l
+bindsym $mod+p exec --no-startup-id flameshot gui
+bindsym $mod+t exec --no-startup-id alacritty
+bindsym $mod+Shift+s exec --no-startup-id betterlockscreen -l
 
 bindsym $mod+q kill
 
